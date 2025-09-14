@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.pingai.app" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>PingAI</name>
+  <description>Text your AI — even without internet.</description>
+  <author email="dev@ping.ai" href="https://example.com">PingAI</author>
+  <content src="index.html" />
+  <access origin="*" />
+  <preference name="BackgroundColor" value="0xff0f1e27" />
+  <preference name="DisallowOverscroll" value="true" />
+  <preference name="AppendUserAgent" value=" PingAIApp" />
+  <preference name="SplashScreenDelay" value="0" />
+  <platform name="ios">
+    <preference name="WKWebViewOnly" value="true" />
+  </platform>
+  <platform name="android">
+    <preference name="AndroidLaunchMode" value="singleTask" />
+  </platform>
+</widget>
+

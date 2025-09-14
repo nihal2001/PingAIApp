@@ -1,0 +1,56 @@
+:root {
+  --bg-start: #0f1e27;
+  --bg-end: #0a0f1a;
+  --text: #e9eef3;
+  --muted: #b7c2cc;
+  --card: #60666c;
+  --card-2: #4b5056;
+  --primary: #b7e36a; /* lime-green from mock */
+  --primary-text: #1a1f1a;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--text); background: linear-gradient(180deg, var(--bg-start), var(--bg-end)); overflow: hidden; }
+
+/* Lock the app to the viewport and prevent page scroll */
+.app { height: 100vh; height: 100dvh; position: relative; padding-bottom: 6.5rem; overflow: hidden; }
+.screen { max-width: 440px; margin: 0 auto; padding: 2rem 1rem 1rem; height: 100%; display: flex; flex-direction: column; min-height: 0; }
+
+.welcome { text-align: center; margin-top: .75rem; }
+.welcome h1 { margin: 0 0 .3rem; font-weight: 700; font-size: 2rem; letter-spacing: 0.2px; }
+.welcome p { margin: 0 auto 1rem; max-width: 26rem; color: var(--muted); line-height: 1.35; }
+
+.cta { appearance: none; border: none; background: var(--primary); color: var(--primary-text); font-weight: 700; padding: .9rem 1.2rem; border-radius: 999px; cursor: pointer; box-shadow: 0 6px 18px rgba(183, 227, 106, 0.25); }
+.cta:active { transform: translateY(1px); }
+
+.chats { margin-top: 1.6rem; display: flex; flex-direction: column; min-height: 0; }
+.chats h2 { font-size: 1.1rem; font-weight: 700; margin: 0 0 .6rem; }
+
+.search { display: flex; align-items: center; gap: .5rem; background: rgba(255,255,255,0.06); padding: .6rem .8rem; border-radius: 999px; color: var(--muted); border: 1px solid rgba(255,255,255,0.06); }
+.search input { flex: 1; background: transparent; border: none; outline: none; color: var(--text); font-size: 0.95rem; }
+.search svg { opacity: .8; color: var(--muted); }
+
+.chat-card { margin-top: .9rem; background: linear-gradient(180deg, var(--card), var(--card-2)); border-radius: 18px; padding: .35rem; position: relative; /* becomes the scroll container */
+  flex: 1 1 auto; min-height: 0; height: var(--chat-card-height, auto); overflow: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+.chat-row { width: 100%; display: flex; align-items: center; justify-content: space-between; border: none; background: transparent; color: inherit; text-align: left; padding: .9rem .9rem; cursor: pointer; }
+.chat-row + .chat-row { border-top: 1px solid rgba(255,255,255,0.12); }
+.chat-row:active { background: rgba(0,0,0,0.08); }
+
+.left { display: grid; gap: .15rem; }
+.title { font-weight: 700; letter-spacing: .2px; }
+.subtitle { color: #dde3ea; opacity: .75; font-size: .9rem; }
+.right { display: flex; align-items: center; gap: .6rem; color: #e6ebf1; opacity: .85; }
+.date { font-size: .85rem; }
+
+.scroll-handle { position: absolute; right: .4rem; bottom: .4rem; width: 3px; height: 22px; border-radius: 2px; background: rgba(0,0,0,0.4); opacity: .6; }
+
+.fab { position: fixed; left: 50%; transform: translateX(-50%); bottom: 1rem; width: min(440px, 92vw); background: var(--primary); color: var(--primary-text); border: none; border-radius: 999px; padding: 1rem; font-weight: 800; box-shadow: 0 12px 28px rgba(183, 227, 106, 0.25); cursor: pointer; }
+.fab:active { transform: translateX(-50%) translateY(1px); }
+
+.settings { position: fixed; left: .4rem; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.06); color: var(--text); display: grid; place-items: center; cursor: pointer; }
+.settings:active { transform: translateY(-50%) scale(.98); }
+
+@media (min-width: 520px) {
+  .screen { padding-left: 0; padding-right: 0; }
+}
