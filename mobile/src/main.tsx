@@ -16,4 +16,3 @@ if ((window as any).cordova) {
 } else {
   boot();
 }
-

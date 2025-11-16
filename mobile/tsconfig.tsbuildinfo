@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/vite-env.d.ts","./src/components/chatlist.tsx","./src/components/chatpage.tsx","./src/components/emptystate.tsx","./src/components/icons.tsx","./src/hooks/usefetchstate.ts","./src/utils/api.ts","./src/utils/date.ts"],"version":"5.9.2"}
